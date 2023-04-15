@@ -5,9 +5,9 @@
     "type": "git",
     "url": "https://github.com/pueblak/aspen-procs"
   },
-  "displayName": "ASPEN Procs",
-  "description": "Syntax highlighting for ASPEN Procs",
-  "version": "1.0.0",
+  "displayName": "ASPEN PROCS",
+  "description": "Syntax highlighting for ASPEN PROCS",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -17,7 +17,7 @@
   "contributes": {
     "languages": [{
       "id": "procs",
-      "aliases": ["Procs", "procs"],
+      "aliases": ["PROCS", "Procs", "procs"],
       "extensions": [".EXT"],
       "configuration": "./language-configuration.json"
     }],

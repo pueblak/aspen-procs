@@ -5,50 +5,20 @@
 		".EXT"
 	],
 	"patterns": [
-		{
-			"include": "#constants"
-		},
-		{
-			"include": "#labels"
-		},
-		{
-			"include": "#storages"
-		},
-		{
-			"include": "#variables"
-		},
-		{
-			"include": "#synonyms"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#comments"
-		}
+		{ "include": "#comments" },
+		{ "include": "#labels" },
+		{ "include": "#keywords" },
+		{ "include": "#storages" },
+		{ "include": "#synonyms" },
+		{ "include": "#constants" },
+		{ "include": "#strings" },
+		{ "include": "#variables" }
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.procs",
-				"match": "(^(S (AS|DS)|C (IC|DC)|F (CR|DL|EX)|\\/ (DI|RD|CC|CS|CL|DL|PS)|G AG|L AL|!|#|\\?|&( \\$)?))|(\\b(EQ|GT|LT|NE|GE|LE)\\b)"
-			},
-			{
-				"name": "keyword.operator.procs",
-				"match": "\\W@?(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|NO_HALT|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM))\\.?\\b"
-			},
-			{
-				"name": "keyword.other.procs",
-				"match": "((\\$|[0-9]*:)[0-9]+\\b)|(\\((L|R|[0-9]+)\\s*,\\s*[0-9]+\\))"
-			}]
-		},
 		"constants": {
 			"patterns": [{
 				"name": "constant.numeric.procs",
-				"match": "\\b[0-9]+(.[0-9]+)?\\b"
+				"match": "\\b\\d+(.\\d+)?\\b"
 			},
 			{
 				"name": "constant.language.procs",
@@ -57,14 +27,14 @@
 		},
 		"variables": {
 			"patterns": [{
-				"name": "variable.parameter.procs",
-				"match": "(((?<=^S AS)|(?<=^C IC)|(?<=^C DC))\\s+[a-zA-Z_]\\w*\\b)|((?<=^\\/ RD)\\s+(\\(?[0-9]+\\s*,?\\s*[0-9]+\\)?\\s+)[a-zA-Z_]\\w*\\b)"
+				"name": "variable.parameter.defined.procs",
+				"match": "(((?<=^S AS)|(?<=^S DS)|(?<=^C IC)|(?<=^C DC))\\s+[a-zA-Z_]\\w*\\b)|((?<=^\\/ RD)\\s+(\\(?\\d+\\s*,?\\s*\\d+\\)?\\s+)[a-zA-Z_]\\w*\\b)"
 			}]
 		},
 		"synonyms": {
 			"patterns": [{
-				"name": "constant.character.procs",
-				"match": "@+[a-zA-Z_][a-zA-Z0-9_]*\\.?((?=$)|(?=[\\s\\w:(@\")\\]}]))"
+				"name": "constant.character.reference.procs",
+				"match": "@+[a-zA-Z_]\\w*\\.?((?=$)|(?=[\\s\\w:(@\")\\]}]))"
 			}]
 		},
 		"labels": {
@@ -88,11 +58,25 @@
 		"storages": {
 			"patterns": [{
 				"name": "storage.type.procs",
-				"match": "@*\\b([0-9]+)(:[0-9]+)?[^G]\\b"
+				"match": "@*\\b(\\d+)(:\\d+)?[^G]\\b"
 			},
 			{
 				"name": "storage.modifier.procs",
-				"match": "@*\\b([0-9]+|[a-zA-Z_]\\w*\\.?)(:[0-9]+)?G(\\s|$)"
+				"match": "@*\\b(\\d+|[a-zA-Z_]\\w*\\.?)(:\\d+)?G(\\s|$)"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.command.procs",
+				"match": "(^(S (AS|DS)|C (IC|DC)|F (CR|DL|EX)|\\/ (DI|CC|CS|CL|DL|PS)|G AG|L AL|!|#|\\?|&( \\$)?))|(\\b(EQ|GT|LT|NE|GE|LE)\\b)|(\\/ RD\\s+(\\(?\\d+\\s*,?\\s*\\d+\\)?\\s+))"
+			},
+			{
+				"name": "keyword.control.reserved.procs",
+				"match": "(?<=\\W)@?(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|NO_HALT|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM))\\b\\.?"
+			},
+			{
+				"name": "keyword.control.access.procs",
+				"match": "((\\$|\\d*:)\\d+\\b)|(\\((L|R|\\d+)\\s*,\\s*\\d+\\))"
 			}]
 		},
 		"strings": {
