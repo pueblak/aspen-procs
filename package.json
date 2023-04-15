@@ -17,7 +17,7 @@
   "contributes": {
     "languages": [{
       "id": "procs",
-      "aliases": ["PROCS", "Procs", "procs"],
+      "aliases": ["PROCS", "Procs", "procs", "ASPEN PROCS", "Aspen Procs", "aspen procs"],
       "extensions": [".EXT"],
       "configuration": "./language-configuration.json"
     }],
