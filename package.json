@@ -7,7 +7,7 @@
   },
   "displayName": "ASPEN PROCS",
   "description": "Syntax highlighting for ASPEN PROCS",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -16,15 +16,15 @@
   ],
   "contributes": {
     "languages": [{
-      "id": "procs",
-      "aliases": ["PROCS", "Procs", "procs", "ASPEN PROCS", "Aspen Procs", "aspen procs"],
+      "id": "aspen-procs",
+      "aliases": ["PROCS", "Procs", "procs", "ASPEN", "Aspen", "aspen", "ASPEN PROCS", "Aspen Procs", "aspen procs"],
       "extensions": [".EXT"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "procs",
-      "scopeName": "source.procs",
-      "path": "./syntaxes/procs.tmLanguage.json"
+      "language": "aspen-procs",
+      "scopeName": "source.aspen-procs",
+      "path": "./syntaxes/aspen-procs.tmLanguage.json"
     }],
     "pricing": "Free"
   }

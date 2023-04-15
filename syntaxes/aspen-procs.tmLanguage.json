@@ -1,0 +1,101 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ASPEN PROCS",
+	"fileTypes": [
+		".EXT"
+	],
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#labels" },
+		{ "include": "#variables" },
+		{ "include": "#keywords" },
+		{ "include": "#storages" },
+		{ "include": "#synonyms" },
+		{ "include": "#constants" },
+		{ "include": "#strings" }
+	],
+	"repository": {
+		"constants": {
+			"patterns": [{
+				"name": "constant.character.numeric.aspen-procs",
+				"match": "\\b\\d+(\\.\\d+)?\\b"
+			},
+			{
+				"name": "keyword.control.common.aspen-procs",
+				"match": "\\b(YES|NO)\\b"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "support.function.aspen-procs",
+				"match": "((?<=^S AS)|(?<=^S DS)|(?<=^C IC)|(?<=^C DC)|(?<=^\\/ RD)|(?<=^\\/ RD \\(\\d,\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\))|(?<=^\\/ RD \\(\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\d\\)))\\s+[a-zA-Z_]\\w*\\b"
+			}]
+		},
+		"synonyms": {
+			"patterns": [{
+				"name": "constant.character.reference.aspen-procs",
+				"match": "@+[a-zA-Z_]\\w*\\.?((?=$)|(?=[\\s\\w:(@\")\\]}]))"
+			}]
+		},
+		"labels": {
+			"patterns": [{
+				"name": "variable.parameter.label.aspen-procs",
+				"match": "^:[A-Za-z_]\\w+\\b"
+			},
+			{
+				"name": "support.class.positive.aspen-procs",
+				"match": "\\(\\b[^,]+\\b\\)"
+			},
+			{
+				"name": "invalid.illegal.negative.aspen-procs",
+				"match": "\\[\\b.+\\b\\]"
+			},
+			{
+				"name": "variable.parameter.transfer.aspen-procs",
+				"match": "\\{\\b.+\\b\\}"
+			}]
+		},
+		"storages": {
+			"patterns": [{
+				"name": "storage.type.aspen-procs",
+				"match": "@*\\b(\\d+)(:\\d+)?[^G]\\b"
+			},
+			{
+				"name": "storage.modifier.aspen-procs",
+				"match": "@*\\b(\\d+|[a-zA-Z_]\\w*\\.?)(:\\d+)?G(\\s|$)"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.command.aspen-procs",
+				"match": "(^(S (AS|DS)|C (IC|DC)|F (CR|DL|EX)|\\/ (DI|CC|CS|CL|DL|PS)|G AG|L AL|!|#|\\?|&( \\$)?))|(\\b(EQ|GT|LT|NE|GE|LE)\\b)|(\\/ RD(\\s+\\(\\d+\\s*,\\s*\\d+\\))?(?=\\s))"
+			},
+			{
+				"name": "keyword.control.reserved.aspen-procs",
+				"match": "(?<=\\W)@?(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|NO_HALT|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM)|ARGS_\\d+|RETURN)\\b\\.?"
+			},
+			{
+				"name": "constant.character.access.aspen-procs",
+				"match": "(?<!^\/ RD )(((\\$|\\d*:)\\d+\\b)|(\\((L|R|\\d+)\\s*,\\s*\\d+\\)))"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.aspen-procs",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.aspen-procs",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.aspen-procs",
+				"match": "^\\*.*"
+			}]
+		}
+	},
+	"scopeName": "source.aspen-procs"
+}
