@@ -43,16 +43,20 @@
 				"match": "^:[A-Za-z_]\\w+\\b"
 			},
 			{
-				"name": "support.class.positive.aspen-procs",
-				"match": "\\(\\b[^,]+\\b\\)"
+				"name": "support.class.success.aspen-procs",
+				"match": "(\\(\\w+\\))|(\\(\\w*(?=@))|((?<=\\.)\\w*\\))"
 			},
 			{
-				"name": "invalid.illegal.negative.aspen-procs",
-				"match": "\\[\\b.+\\b\\]"
+				"name": "invalid.illegal.failure.aspen-procs",
+				"match": "(\\[\\w+\\])|(\\[\\w*(?=@))|((?<=\\.)\\w*\\])"
 			},
 			{
 				"name": "variable.parameter.transfer.aspen-procs",
-				"match": "\\{\\b.+\\b\\}"
+				"match": "(\\{\\w+\\})|(\\{\\w*(?=@))|((?<=\\.)\\w*\\})"
+			},
+			{
+				"name": "variable.parameter.plaintext.aspen-procs",
+				"match": "((?<=\\.)\\w+(?=@))"
 			}]
 		},
 		"storages": {
@@ -76,7 +80,7 @@
 			},
 			{
 				"name": "constant.character.access.aspen-procs",
-				"match": "(?<!^\/ RD )(((\\$|\\d*:)\\d+\\b)|(\\((L|R|\\d+)\\s*,\\s*\\d+\\)))"
+				"match": "(?<!^\/ RD )(((\\$|\\d*:)\\d+\\b)|(\\((L|R|\\d+)\\s*,\\s*\\d+\\)))|(?<!^)\\*"
 			}]
 		},
 		"strings": {
