@@ -1,0 +1,27 @@
+{
+  "name": "aspen-procs",
+  "publisher": "pueblakody",
+  "displayName": "ASPEN Procs",
+  "description": "Syntax highlighting for ASPEN Procs",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "procs",
+      "aliases": ["Procs", "procs"],
+      "extensions": [".EXT"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "procs",
+      "scopeName": "source.procs",
+      "path": "./syntaxes/procs.tmLanguage.json"
+    }],
+    "pricing": "Free"
+  }
+}
