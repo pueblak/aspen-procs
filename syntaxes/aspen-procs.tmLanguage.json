@@ -22,19 +22,19 @@
 			},
 			{
 				"name": "keyword.control.common.aspen-procs",
-				"match": "\\b(YES|NO)\\b"
+				"match": "\\b(YES|NO|AUTO|NO_HALT)\\b"
 			}]
 		},
 		"variables": {
 			"patterns": [{
 				"name": "support.function.aspen-procs",
-				"match": "((?<=^S AS)|(?<=^S DS)|(?<=^C IC)|(?<=^C DC)|(?<=^\\/ RD)|(?<=^\\/ RD \\(\\d,\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\))|(?<=^\\/ RD \\(\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\d\\)))\\s+[a-zA-Z_]\\w*\\b"
+				"match": "((?<=^S AS)|(?<=^S DS)|(?<=^C IC)|(?<=^C DC)|(?<=^\\/ RD)|(?<=^\\/ RD \\(\\d,\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\))|(?<=^\\/ RD \\(\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\d\\)))\\s+(?!(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM)|ARGS_\\d+|RETURN)\\s+)[a-zA-Z_]\\w*\\b"
 			}]
 		},
 		"synonyms": {
 			"patterns": [{
 				"name": "constant.character.reference.aspen-procs",
-				"match": "@+[a-zA-Z_]\\w*\\.?((?=$)|(?=[\\s\\w:(@\")\\]}]))"
+				"match": "@+[a-zA-Z_]\\w*\\.*((?=$)|(?=[\\s\\w:(@\")\\]}]))"
 			}]
 		},
 		"labels": {
@@ -56,7 +56,7 @@
 			},
 			{
 				"name": "variable.parameter.plaintext.aspen-procs",
-				"match": "((?<=\\.)\\w+(?=@))"
+				"match": "((?<=\\.)(\\w+)(?=@))"
 			}]
 		},
 		"storages": {
@@ -66,7 +66,7 @@
 			},
 			{
 				"name": "storage.modifier.aspen-procs",
-				"match": "@*\\b(\\d+|[a-zA-Z_]\\w*\\.?)(:\\d+)?G(\\s|$)"
+				"match": "@*\\b(\\d+|[a-zA-Z_]\\w*\\.?)(:\\d+)?G\\b"
 			}]
 		},
 		"keywords": {
@@ -76,11 +76,11 @@
 			},
 			{
 				"name": "keyword.control.reserved.aspen-procs",
-				"match": "(?<=\\W)@?(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|NO_HALT|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM)|ARGS_\\d+|RETURN)\\b\\.?"
+				"match": "(?<!\\w)@?(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM)|ARGS_\\d+|RETURN)\\b\\.?"
 			},
 			{
 				"name": "constant.character.access.aspen-procs",
-				"match": "(?<!^\/ RD )(((\\$|\\d*:)\\d+\\b)|(\\((L|R|\\d+)\\s*,\\s*\\d+\\)))|(?<!^)\\*"
+				"match": "(?<!^\/ RD )(((\\$|\\d*:)\\d+\\b)|(\\((L|R|\\d+)\\s*,\\s*\\d+\\)\\.?))|(?<!^)\\*|\\.+"
 			}]
 		},
 		"strings": {

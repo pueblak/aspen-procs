@@ -37,3 +37,12 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
         - `@DIFF.` is highlighted blue to indicate a synonym reference
 - Allow for the use of `*` as a wildcard character outside of comments and strings
 - Add more details to the README file
+
+### [1.2.0] -- 2023-04-16
+- Fixed known issue with reserved synonyms not being highlighted correctly when used after certain commands
+    - In order to do this, one of the regex patterns became significantly longer, so this may be modified in the future
+- Add `AUTO` and `NO_HALT` to the list of keywords
+- Fixed highlighting for GDA references when adjacent to a bracket symbol or string
+- All `.` symbols are now highlighted blue (except within comments and quoted) since they are most often used to delimit synonyms
+    - This does mean that the `.` symbol is highlighted blue when used in an unquoted string (such as in `/ DI .`), so it will be up to the user to put quotes around the string if they want to avoid this
+- Fixed an issue with comments being highlighted a different color when beginning with `**` instead of `*`
