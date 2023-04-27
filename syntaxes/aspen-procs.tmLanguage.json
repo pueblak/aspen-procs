@@ -28,35 +28,39 @@
 		"variables": {
 			"patterns": [{
 				"name": "support.function.aspen-procs",
-				"match": "((?<=^S AS)|(?<=^S DS)|(?<=^C IC)|(?<=^C DC)|(?<=^\\/ RD)|(?<=^\\/ RD \\(\\d,\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\))|(?<=^\\/ RD \\(\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\d\\)))\\s+(?!(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM)|ARGS_\\d+|RETURN)\\s+)[a-zA-Z_]\\w*\\b"
+				"match": "((?<=^S AS)|(?<=^S DS)|(?<=^C IC)|(?<=^C DC)|(?<=^\\/ RD)|(?<=^\\/ RD \\(\\d,\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\))|(?<=^\\/ RD \\(\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\d\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\))|(?<=^\\/ RD \\(\\d,\\s\\d\\d\\))|(?<=^\\/ RD \\(\\d\\d,\\s\\d\\d\\)))\\s+(?!(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM)|ARGS_\\d+|RETURN)\\s+)[a-zA-Z_](\\w|-|\\.)*\\b"
 			}]
 		},
 		"synonyms": {
 			"patterns": [{
 				"name": "constant.character.reference.aspen-procs",
-				"match": "@+[a-zA-Z_]\\w*\\.*((?=$)|(?=[\\s\\w:(@\")\\]}]))"
+				"match": "@+[a-zA-Z_](\\w|-|\\.)*\\.*((?=$)|(?=[\\s\\w:(@\")\\]}]))"
 			}]
 		},
 		"labels": {
 			"patterns": [{
 				"name": "variable.parameter.label.aspen-procs",
-				"match": "^:[A-Za-z_]\\w+\\b"
+				"match": "^:.{1,10}\\s*$"
+			},
+			{
+				"name": "invalid.deprecated.too-long.aspen-procs",
+				"match": "^:.{11,}\\s*$"
 			},
 			{
 				"name": "support.class.success.aspen-procs",
-				"match": "(\\(\\w+\\))|(\\(\\w*(?=@))|((?<=\\.)\\w*\\))"
+				"match": "(\\((\\w|-|\\.)+\\))|(\\((\\w|-|\\.)*(?=@))|((?<=\\.)(\\w|-|\\.)*\\))"
 			},
 			{
 				"name": "invalid.illegal.failure.aspen-procs",
-				"match": "(\\[\\w+\\])|(\\[\\w*(?=@))|((?<=\\.)\\w*\\])"
+				"match": "(\\[(\\w|-|\\.|,)+\\])|(\\[(\\w|-|\\.|,)*(?=@))|((?<=\\.)(\\w|-|\\.|,)*\\])"
 			},
 			{
 				"name": "variable.parameter.transfer.aspen-procs",
-				"match": "(\\{\\w+\\})|(\\{\\w*(?=@))|((?<=\\.)\\w*\\})"
+				"match": "(\\{(\\w|-|\\.)+\\})|(\\{(\\w|-|\\.)*(?=@))|((?<=\\.)(\\w|-|\\.)*\\})"
 			},
 			{
 				"name": "variable.parameter.plaintext.aspen-procs",
-				"match": "((?<=\\.)(\\w+)(?=@))"
+				"match": "((?<=\\.)((\\w|-|\\.)+)(?=@))"
 			}]
 		},
 		"storages": {
@@ -80,7 +84,15 @@
 			},
 			{
 				"name": "constant.character.access.aspen-procs",
-				"match": "(?<!^\/ RD )(((\\$|\\d*:)\\d+\\b)|(\\((L|R|\\d+)\\s*,\\s*\\d+\\)\\.?))|(?<!^)\\*|\\.+"
+				"match": "(?<!^\/ RD )(((\\$|\\d*:)\\d+\\b)|(\\((L|R|\\d+)\\s*,\\s*(\\d+|@(\\w|-|\\.)+)\\)\\.?))|(?<!^)\\*|\\.+",
+				"captures": {
+					"5": {
+						"patterns": [{
+							"name": "keyword.control.access.aspen-procs",
+							"match": "(L|R)"
+						}]
+					}
+				}
 			}]
 		},
 		"strings": {

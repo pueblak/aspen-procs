@@ -7,7 +7,7 @@
   },
   "displayName": "ASPEN PROCS",
   "description": "Syntax highlighting for ASPEN PROCS",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "engines": {
     "vscode": "^1.77.0"
   },

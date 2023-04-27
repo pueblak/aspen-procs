@@ -3,7 +3,7 @@
 All notable changes to the "aspen-procs" extension will be documented in this file.
 
 
-## [1.0.0] -- 2023-04-14
+### [1.0.0] -- 2023-04-14
 
 - Initial release
 
@@ -13,7 +13,7 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
 - Fixed some issues with reserved synonyms not being highlighted correctly (more to be done)
 - Added a LICENSE file to the repository
 
-## [1.1.0] -- 2023-04-15
+### [1.1.0] -- 2023-04-15
 - Change the name of the extension to "aspen-procs" to avoid confusion with any other "procs" extensions
 - Minor bugfix with numbers not being highlighted correctly when preceded by another number
 - Minor bugfix with the `\ RD` command not highlighting synonym definitions correctly when the `<(row,col)>` option is used
@@ -46,3 +46,10 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
 - All `.` symbols are now highlighted blue (except within comments and quoted) since they are most often used to delimit synonyms
     - This does mean that the `.` symbol is highlighted blue when used in an unquoted string (such as in `/ DI .`), so it will be up to the user to put quotes around the string if they want to avoid this
 - Fixed an issue with comments being highlighted a different color when beginning with `**` instead of `*`
+
+### [1.2.1] -- 2023-04-27
+- Synonyms and labels now allow `.` and `-` characters in their names
+- Limit all labels to 10 characters or fewer
+    - This is due to the internal workings of PROCS. Labels with more than 10 characters may fail to be recognized
+    - Labels that are 11 characters or greater will be highlighted red to warn the user of this issue
+- Failure transfer statements now allow `,` characters, allowing for a list of failure transfers
