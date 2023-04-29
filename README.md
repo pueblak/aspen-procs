@@ -4,7 +4,7 @@ This extension adds syntax highlighting for the ASPEN PROCS language. Dark theme
 
 ## Features
 
-Basic syntax highlighting for built-in keywords, comments, strings, constants, synonyms, and labels. Please note that although the language allows for the use of unquoted strings, this extension does not support them. Therfore, for the sake of readability, it is recommended that all strings be enclosed in quotes.
+Basic syntax highlighting for built-in keywords, comments, strings, constants, synonyms, and labels. Please note that although the language allows for the use of unquoted strings, this extension does not support them. Therefore, for the sake of readability, it is recommended that all strings be enclosed in quotes.
 
 Supported Commands (KEY: `<id>` = required; `<<id>>` = optional):
 
