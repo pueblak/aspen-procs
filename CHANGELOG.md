@@ -98,4 +98,8 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
 
 ### [1.4.2] -- 2023-04-29
 
--   Fixed a minor issue with too many words being highlighted yellow in the `/ RD` command
+-   Fixed a minor issue with too many words being highlighted yellow in `/ RD` commands
+
+### [1.4.3] -- 2023-04-29
+
+-   Fixed another issue with label transfers not being highlighted correctly in `/ RD` commands

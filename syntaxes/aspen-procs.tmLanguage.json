@@ -92,6 +92,9 @@
 							"include": "#synonyms"
 						},
 						{
+							"include": "#labels"
+						},
+						{
 							"include": "#constants"
 						},
 						{
