@@ -88,3 +88,10 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
     -   It may have been placed there to solve a problem that no longer exists
 -   Added a unique case for `/ DI` command to make highlighting more accurate
 -   Numbers are no longer highlighted randomly in raw text
+
+### [1.4.1] -- 2023-04-29
+
+-   Fixed a bug with `S DS`, `C IC`, `C DC`, and `/ RD` commands not being highlighted correctly until a certain amount of text was typed
+-   Constants are now highlighted within system commands
+-   `AUTO` and `NO_HALT` are now highlighted as keywords when used in the `&` command type
+    -   Was accidentally removed during the previous update
