@@ -74,3 +74,17 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
     -   Negative numbers are NOT allowed as `<row>`, `<col>`, `<index>`, or `<length>` values in any commands
     -   Negative numbers ARE allowed as `<data_elements>`, `<value>`, `<arg1>`, `<arg2>`, `<lda_data>`, and `<gda_data>` values in any commands
     -   I have not had great success with using negative numbers in PROCS, but supposedly they are allowed, so they will be highlighted as well
+-   Include additional details in the README file
+
+### [1.4.0] -- 2023-04-29
+
+-   Fixed an issue with random words getting highlighted among raw text
+    -   This was due to GDA accesses not requiring a `@` symbol before the GDA name, therefore all words ending in `G` were being highlighted as GDA accesses
+-   Fixed an issue with the `^` symbol not being highlighted correctly when used in a string
+-   Reserved synonyms are now categorized with other synonyms to make things more consistent
+-   Inline file creation blocks are now italicized to make them stand out more
+-   Removed `\\.+` from the end of the second keywords pattern
+    -   This was causing `.` to be highlighted unnecessarily in raw text
+    -   It may have been placed there to solve a problem that no longer exists
+-   Added a unique case for `/ DI` command to make highlighting more accurate
+-   Numbers are no longer highlighted randomly in raw text

@@ -66,4 +66,3 @@ Latest release notes are available in the [CHANGELOG](CHANGELOG.md).
 
 -   **Just because it gets highlighted doesn't mean it's valid syntax. This extension does not validate syntax.**
 -   Transfer statements using multiple synonyms have inconsistent highlighting on the text between those synonyms
--   Strange instances of highlighting synonyms when otherwise not expected, particularly when in the middle of raw text
