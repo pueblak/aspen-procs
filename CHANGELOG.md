@@ -95,3 +95,7 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
 -   Constants are now highlighted within system commands
 -   `AUTO` and `NO_HALT` are now highlighted as keywords when used in the `&` command type
     -   Was accidentally removed during the previous update
+
+### [1.4.2] -- 2023-04-29
+
+-   Fixed a minor issue with too many words being highlighted yellow in the `/ RD` command

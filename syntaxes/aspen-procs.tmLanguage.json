@@ -65,8 +65,8 @@
 				}
 			},
 			{
-				"name": "support.function.read.aspen-procs",
-				"match": "^(\\/\\s+RD)\\s+(\\(\\d+\\s*,\\s*\\d+\\)\\s+)?([a-zA-Z_](\\w|-)*)(.+)?",
+				"name": "support.other.text.aspen-procs",
+				"match": "^(\\/\\s+RD)\\s+(\\(\\d+\\s*,\\s*\\d+\\)\\s+)?([a-zA-Z_](\\w|-)*)(\\s+\\S+)?",
 				"captures": {
 					"1": {
 						"name": "keyword.control.read.aspen-procs"
@@ -78,10 +78,13 @@
 						"patterns": [{
 							"name": "keyword.control.reserved.aspen-procs",
 							"match": "\\b(LDA\\$\\$\\$|ASPEN_HOME|AUTHNO|COBOL(PGM|_SUFFIX|_TAIL)?|COL|DATE|DEOP|EOPMESS|LINK(DATE|TIME)|MENUHEAD|(MAIN|NEXT)MENU|MODE|OS|PATH|PROCDUMP|PROMPT_VAL|RMRC|ROW|RUNPATH|ST_DIR|START|SYSRC|TERMNO|TIME|USER(ID|TERM)|ARGS_\\d+|RETURN)\\b"
+						},
+						{
+							"name": "support.function.declare.aspen-procs",
+							"match": ".+"
 						}]
 					},
 					"5": {
-						"name": "support.other.text.aspen-procs",
 						"patterns": [{
 							"include": "#storages"
 						},
