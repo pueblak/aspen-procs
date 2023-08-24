@@ -103,3 +103,7 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
 ### [1.4.3] -- 2023-04-29
 
 -   Fixed another issue with label transfers not being highlighted correctly in `/ RD` commands
+
+### [1.4.4] -- 2023-08-24
+
+-   Add temporary icon to project
