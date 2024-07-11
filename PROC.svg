@@ -5,11 +5,35 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="128"
    height="128"
    viewBox="0 0 33.866666 33.866666"
    version="1.1"
-   id="svg8">
+   id="svg8"
+   sodipodi:docname="PROC.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="0.57314319"
+     inkscape:cx="857.45611"
+     inkscape:cy="-167.09005"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2">
     <rect
@@ -43,14 +67,15 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1">
+     id="layer1"
+     transform="matrix(0.90334201,0,0,0.78121779,1.6378967,3.7047031)">
     <text
        xml:space="preserve"
        id="text833"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect835);fill:#dee033;fill-opacity:1;stroke:none;filter:url(#filter1139);"
-       transform="matrix(2.0667435,0,0,2.2426165,-46.692897,-128.52319)"><tspan
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect835);fill:#cddf20;fill-opacity:1;stroke:none;filter:url(#filter1139);"
+       transform="matrix(5.0391204,0,0,3.6536854,-107.61638,-220.0443)"><tspan
          x="22.677734"
          y="68.565499"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Haettenschweiler;-inkscape-font-specification:'Haettenschweiler Bold';fill:#dee033;fill-opacity:1">PROC</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Haettenschweiler;-inkscape-font-specification:'Haettenschweiler Bold';fill:#cddf20;fill-opacity:1">P</tspan></tspan></text>
   </g>
 </svg>
