@@ -28,12 +28,13 @@
      id="namedview14"
      showgrid="false"
      inkscape:zoom="0.57314319"
-     inkscape:cx="857.45611"
-     inkscape:cy="-167.09005"
+     inkscape:cx="143.84735"
+     inkscape:cy="198.14736"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0" />
   <defs
      id="defs2">
     <rect
@@ -62,20 +63,22 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      id="layer1"
      transform="matrix(0.90334201,0,0,0.78121779,1.6378967,3.7047031)">
-    <text
-       xml:space="preserve"
+    <g
+       aria-label="P"
+       transform="matrix(5.0391204,0,0,3.6536854,-107.61638,-220.0443)"
        id="text833"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect835);fill:#cddf20;fill-opacity:1;stroke:none;filter:url(#filter1139);"
-       transform="matrix(5.0391204,0,0,3.6536854,-107.61638,-220.0443)"><tspan
-         x="22.677734"
-         y="68.565499"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Haettenschweiler;-inkscape-font-specification:'Haettenschweiler Bold';fill:#cddf20;fill-opacity:1">P</tspan></tspan></text>
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect835);fill:#cddf20;fill-opacity:1;stroke:none;filter:url(#filter1139)">
+      <path
+         d="m 24.445063,65.836992 v 2.728507 h -1.586462 v -7.410377 h 1.710485 q 1.018022,0 1.508947,0.258382 0.496092,0.258381 0.496092,1.054195 v 2.056716 q 0,0.728635 -0.403075,1.033525 -0.403075,0.299723 -1.725987,0.279052 z m 0.542601,-1.452103 v -1.777664 q 0,-0.392739 -0.542601,-0.392739 v 2.563143 q 0.542601,0 0.542601,-0.39274 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Haettenschweiler;-inkscape-font-specification:'Haettenschweiler Bold';fill:#cddf20;fill-opacity:1"
+         id="path838" />
+    </g>
   </g>
 </svg>

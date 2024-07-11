@@ -115,3 +115,7 @@ All notable changes to the "aspen-procs" extension will be documented in this fi
 ### [1.4.6] -- 2023-08-24
 
 -   Update material icon
+
+### [1.4.7] -- 2023-08-24
+
+-   Update material icon
